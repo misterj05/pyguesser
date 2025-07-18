@@ -22,7 +22,6 @@ def print_value(value):
     global should_exit
     if value != needed_number:
         print(value)
-        # print("I have printed: " + str(value))
     else:
         print()
         print(value)
@@ -43,7 +42,6 @@ def main():
         current_time = randomize_current_time()
         print_value(current_time)
         time.sleep(0.000000001) # Limits speed as to not runaway.
-
 
 thread1 = threading.Thread(target=main) 
 thread2 = threading.Thread(target=count_seconds)
