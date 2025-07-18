@@ -32,15 +32,15 @@ def print_value(value):
         should_exit = True
         exit()
 
-def randomize_current_time():
+def get_random_number():
     global total_randoms
     total_randoms = total_randoms + 1
     return random.randint(1, max_range)
 
 def main():
     while 1:
-        current_time = randomize_current_time()
-        print_value(current_time)
+        number = get_random_number()
+        print_value(number)
         time.sleep(0.000000001) # Limits speed as to not runaway.
 
 thread1 = threading.Thread(target=main) 
